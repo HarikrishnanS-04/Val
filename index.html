@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <!-- Makes it mobile friendly -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Be My Valentine ❤️</title>
 
     <style>
@@ -60,6 +57,18 @@
             animation: pop 0.6s ease forwards;
         }
 
+        /* 💖 PHOTO STYLE (ADDED) */
+        #valentinePhoto {
+            width: 60%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 20px;
+            margin: 20px auto 0;
+            display: none;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            animation: pop 0.8s ease forwards;
+        }
+
         @keyframes pop {
             from { transform: scale(0.5); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
@@ -86,17 +95,17 @@
     </div>
 
     <div class="message" id="loveMessage">
-        AWWWW! so cute,thanku aryananda vm ❤️❤️
+        AWWWW! thanku so much aryananda vm, i love u too
     </div>
-     </div>
 
-  
+    <!-- 📸 PHOTO -->
     <img id="valentinePhoto" src="ok.jpg" alt="My Valentine">
 
     <script>
         const noBtn = document.getElementById("noBtn");
         const yesBtn = document.getElementById("yesBtn");
         const message = document.getElementById("loveMessage");
+        const photo = document.getElementById("valentinePhoto"); // ADDED
 
         function moveNoButton() {
             const x = Math.random() * (window.innerWidth - 100);
@@ -105,12 +114,12 @@
             noBtn.style.top = y + "px";
         }
 
-        // Runs away on hover (PC) and touch (phone)
         noBtn.addEventListener("mouseover", moveNoButton);
         noBtn.addEventListener("touchstart", moveNoButton);
 
         yesBtn.addEventListener("click", () => {
             message.style.display = "block";
+            photo.style.display = "block"; // SHOW PHOTO 💖
             startHearts();
         });
 
@@ -129,5 +138,4 @@
     </script>
 
 </body>
-
 </html>
