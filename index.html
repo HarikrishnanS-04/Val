@@ -7,14 +7,15 @@
 
     <style>
         body {
-            margin: 0;
-            padding: 20px;
-            font-family: 'Segoe UI', sans-serif;
-            text-align: center;
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            overflow: hidden;
-            color: white;
-        }
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    overflow-x: hidden;   /* allow vertical scroll */
+    color: white;
+}
+
 
         h1 {
             margin-top: 60px;
@@ -57,17 +58,17 @@
             animation: pop 0.6s ease forwards;
         }
 
-        /* 💖 PHOTO STYLE (ADDED) */
-        #valentinePhoto {
-            width: 60%;
-            max-width: 250px;
-            height: auto;
-            border-radius: 20px;
-            margin: 20px auto 0;
-            display: none;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-            animation: pop 0.8s ease forwards;
-        }
+       #valentinePhoto {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 20px;
+    margin: 25px auto;
+    display: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    animation: pop 0.8s ease forwards;
+}
+
 
         @keyframes pop {
             from { transform: scale(0.5); opacity: 0; }
@@ -139,4 +140,5 @@
 
 </body>
 </html>
+
 
